@@ -13,7 +13,7 @@
 	<h2>Results</h2>
     <%
     Context initContext = new InitialContext();
-    Context envContext  = (Context)initContext.lookup("java:/comp/env");
+    Context envContext  = (Context)initContext.lookup("java:comp/env");
     DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
     Connection conn = ds.getConnection();
     String sql = "select * from emp";
